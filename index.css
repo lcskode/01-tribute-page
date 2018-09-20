@@ -27,19 +27,20 @@ body {
 }
 
 #img-div {
-  width: 80%;
+  max-width: 80%;
   margin: 0 auto;
 
 }
 
-.responsive-image {
+#image {
+  display: block;
+  max-width: 100%;
   border: 1px solid rgb(184, 184, 184);
   border-radius: 10px;
-  width: 100%;
   padding: 3px;
 }
 
-#content-box {
+#tribute-info {
   /* align-items: center; */
   /* width: 100%; */
   font-size: 20px;
