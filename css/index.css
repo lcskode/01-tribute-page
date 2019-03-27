@@ -1,5 +1,6 @@
 * {
   margin: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -7,39 +8,60 @@ body {
   font-size: 16px;
 }
 
+.clr {
+  clear: both;
+}
+
 #main {
-  width: 85%;
+  width: 80%;
   margin: 0 auto;
+  padding-top: 50px;
   background-color: #f4f4f4;
   color: #444;
   overflow: hidden;
 }
 
 #title {
+  /* box-sizing: border-box; */
+  width: 50%;
+  float: left;
+  /* border: 1px solid gray; */
   text-align: center;
   font-size: 36px;
-  margin: 30px;  
+  margin: 100px auto;
+}
+
+#title-desc {
+  margin: 30px;
 }
 
 #img-div {
-  width: 70%;
+  width: 50%;
+  float: right;
   margin: 0 auto;
-  text-align: center;
-  border: 1px solid rgb(184, 184, 184);
-  border-radius: 10px;
-  padding: 10px;
 }
 
 #image {
   display: block;
-  max-width: 100%;
+  max-width: 75%;
   margin: 0 auto;
   border-radius: 10px 10px 0 0; 
+  border-top: 1px solid gray;
+  border-right: 1px solid gray;
+  border-left: 1px solid gray;
+  padding: 5px;
 }
 
 #img-caption {
-  margin-top: 10px;
+  max-width: 75%;
+  margin: 0 auto;
+  text-align: center;
   line-height: 1.5em;
+  border-right: 1px solid gray;
+  border-left: 1px solid gray;
+  border-bottom: 1px solid gray;
+  padding: 5px;
+
 }
 
 #tribute-info {
@@ -54,4 +76,35 @@ ul {
 
 ul li {
   padding-bottom: 20px;
+}
+
+@media(max-width: 960px) {
+  #main, #title, #img-div {
+    width: 100%;
+    float: none;
+    border: none;
+  }
+
+  #image {
+    display: block;
+    max-width: 70%;
+    border: none;
+  }
+
+  #img-caption {
+    border: none;
+  }
+}
+
+@media(max-width: 540px) {
+  #image {
+    display: block;
+    max-width: 100%;
+    border-radius: 0;
+    padding: 0;
+  }
+
+  #img-caption {
+    border: none;
+  }
 }
